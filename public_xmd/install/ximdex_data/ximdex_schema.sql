@@ -90,7 +90,7 @@ CREATE TABLE `FastTraverse` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Fast scan of node hierarchies';
 
 CREATE TABLE `Groups` (
-  `IdGroup` int(12) unsigned NOT NULL AUTO_INCREMENT,
+  `IdGroup` int(12) unsigned NOT NULL,
   `Name` varchar(255) NOT NULL DEFAULT '0',
   PRIMARY KEY (`IdGroup`),
   UNIQUE KEY `Name` (`Name`)

@@ -33,7 +33,7 @@ class GroupsOrm extends  GenericData
     var $_idField = 'IdGroup';
     var $_table = 'Groups';
     var $_metaData = array(
-        'IdGroup' => array('type' => "int(12)", 'not_null' => 'true', 'auto_increment' => 'true', 'primary_key' => true),
+        'IdGroup' => array('type' => "int(12)", 'not_null' => 'true', 'primary_key' => true),
         'Name' => array('type' => "varchar(255)", 'not_null' => 'true')
     );
     var $_uniqueConstraints = array(

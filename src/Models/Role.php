@@ -211,7 +211,7 @@ class Role extends RolesOrm
     function DeleteRole()
     {
         $dbObj = new \Ximdex\Runtime\Db();
-        $sql = sprintf("DELETE FROM RelRolesActions WHERE idRol = %d", $this->get('IdRole'));
+        $sql = sprintf("DELETE FROM RelRolesActions WHERE IdRol = %d", $this->get('IdRole'));
         $dbObj->Execute($sql);
         if ($dbObj->numErr) {
             $this->SetError(1);
@@ -222,14 +222,14 @@ class Role extends RolesOrm
 
 
         $dbObj = new \Ximdex\Runtime\Db();
-        $sql = sprintf("DELETE FROM RelUsersGroups WHERE idRol = %d", $this->get('IdRole'));
+        $sql = sprintf("DELETE FROM RelUsersGroups WHERE IdRole = %d", $this->get('IdRole'));
         $dbObj->Execute($sql);
         if ($dbObj->numErr) {
             $this->SetError(1);
         }
 
         $dbObj = new \Ximdex\Runtime\Db();
-        $sql = sprintf("DELETE FROM RelGroupsNodes WHERE idRol = %d", $this->get('IdRole'));
+        $sql = sprintf("DELETE FROM RelGroupsNodes WHERE IdRole = %d", $this->get('IdRole'));
         $dbObj->Execute($sql);
         if ($dbObj->numErr) {
             $this->SetError(1);
