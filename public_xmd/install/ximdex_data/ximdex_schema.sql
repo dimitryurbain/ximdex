@@ -119,7 +119,7 @@ CREATE TABLE `Languages` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Ximdex CMS defined languages';
 
 CREATE TABLE `Links` (
-  `IdLink` int(12) unsigned NOT NULL AUTO_INCREMENT,
+  `IdLink` int(12) unsigned NOT NULL,
   `Url` blob NOT NULL,
   `Error` int(12) unsigned DEFAULT NULL,
   `ErrorString` varchar(255) DEFAULT NULL,
@@ -599,7 +599,7 @@ CREATE TABLE `RelXml2Xml` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `Roles` (
-  `IdRole` int(12) unsigned NOT NULL AUTO_INCREMENT,
+  `IdRole` int(12) unsigned NOT NULL,
   `Name` varchar(255) NOT NULL DEFAULT '0',
   `Icon` varchar(255) DEFAULT NULL,
   `Description` varchar(255) DEFAULT NULL,
